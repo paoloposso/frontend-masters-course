@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx jest --watchAll --verbose"
+    "test-watch": "npx jest --watchAll --verbose",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
