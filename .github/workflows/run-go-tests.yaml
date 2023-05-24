@@ -1,4 +1,4 @@
-name: Run tests for Web Portal
+name: Run tests
 
 on:
     push:
