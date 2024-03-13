@@ -7,7 +7,7 @@ on:
         - main
 
 jobs:
-    test_go:
+    run_tests:
       name: "test go"
       runs-on: ubuntu-latest
       steps:
@@ -22,19 +22,3 @@ jobs:
         - name: Run Tests
           run: go test ./...
           working-directory: ./src
-
-    test_node:
-      name: "test node"
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout Repository
-          uses: actions/checkout@v2
-          
-        - name: Install dependencies
-          run: npm install
-          working-directory: ./js/exercises
-
-        - name: Run tests
-          run: npm test
-          working-directory: ./js/exercises
-          
