@@ -53,3 +53,23 @@ func TestDfsEmpty(t *testing.T) {
 		t.Fail()
 	}
 }
+
+func TestNonExistingValue(t *testing.T) {
+	g := NewGraphAdjList()
+
+	g.addEdge(1, 2)
+	g.addEdge(2, 4)
+	g.addEdge(2, 5)
+	g.addEdge(4, 5)
+	g.addEdge(4, 6)
+	g.addEdge(6, 3)
+
+	found, path := g.dfs(1, 7)
+
+	if found == true {
+		t.FailNow()
+	}
+	if len(path) > 0 {
+		t.FailNow()
+	}
+}
